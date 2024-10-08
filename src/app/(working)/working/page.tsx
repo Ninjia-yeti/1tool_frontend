@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { Input, Button, Select, Table, Slider, Typography, Box, Container, TextField } from '@mui/material';
@@ -209,12 +209,7 @@ const WorkingPage = () => {
             </thead>
             <tbody>
               {rows.map((row) => (
-                <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td>{row.name}</td>
-                  <td>{row.category}</td>
-                  <td>{row.value}</td>
-                </tr>
+                <tr></tr>
               ))}
             </tbody>
           </Table>
