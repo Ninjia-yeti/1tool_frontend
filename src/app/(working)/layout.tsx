@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer, Navbar } from "@/components";
 
 interface Props {
     children: React.ReactNode;
@@ -7,6 +8,7 @@ interface Props {
 const WorkingLayout = ({ children }: Props) => {
     return (
         <div className="flex h-screen">
+            <Navbar />
             {children}
         </div>
     )
