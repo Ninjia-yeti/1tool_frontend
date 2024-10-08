@@ -39,7 +39,7 @@ const WorkingPage = () => {
 
   return (
     <Container sx={{ padding: '3%', maxWidth: '90% !important'}}>
-      <Box sx={{ padding: '3%', backgroundColor: 'rgb(146, 63, 255)', height: '88vh' }}>
+      <Box sx={{ padding: '3%', backgroundColor: 'rgb(146, 63, 255)', height: '88vh', opacity: '30%' }}>
         <Box my={4}>
           <Box mb={2} display="flex" flexDirection={{ xs: 'column', sm: 'row' }} gap={2}>
             <Box width={{ xs: '100%', sm: '70%' }} minWidth="70%">
