@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useState, useEffect } from 'react';
 import { Input, Button, Select, Table, Slider, Typography, Box, Container, TextField } from '@mui/material';
@@ -208,9 +208,7 @@ const WorkingPage = () => {
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => (
-                <tr></tr>
-              ))}
+
             </tbody>
           </Table>
         </Box>
