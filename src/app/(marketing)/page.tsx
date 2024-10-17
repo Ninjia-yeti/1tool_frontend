@@ -61,10 +61,8 @@ const HomePage = () => {
             </button>
 
             <div className="flex flex-col items-center mt-8 max-w-3xl w-11/12 md:w-full">
-              <h1 className="text-4xl md:text-6xl lg:textxl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-                Empower Your Search with AI Assistants
-              </h1>
-              <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
+            
+              <p className="text-2xl md:text-xl text-foreground mt-6 text-center">
                 We are re an AI-driven company dedicated to innovation,
                 streamlining operations, and accelerating success through our
                 state-of-the-art AI solutions.
@@ -94,14 +92,14 @@ const HomePage = () => {
                   className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border"
                 />
 
-                <BorderBeam size={250} duration={12} delay={9} />
+                {/* <BorderBeam size={5} duration={30} delay={10} /> */}
               </div>
             </div>
           </div>
         </Container>
       </Wrapper>
       {/*Features*/}
-      {/* <Wrapper
+      <Wrapper
         id="features"
         className="flex flex-col items-center justify-center py-12 relative"
       >
@@ -144,7 +142,7 @@ const HomePage = () => {
             </div>
           </div>
         </Container>
-      </Wrapper> */}
+      </Wrapper>
 
       {/* pricing */}
       <Wrapper className="flex flex-col items-center justify-center py-12 relative">
