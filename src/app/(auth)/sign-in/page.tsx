@@ -1,40 +1,47 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { X, Loader2, Mail, Lock } from 'lucide-react'
-import { FaGoogle } from 'react-icons/fa'
-import Link from 'next/link'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { X, Loader2, Mail, Lock } from "lucide-react";
+import { FaGoogle } from "react-icons/fa";
+import Link from "next/link";
 
 export default function SignInPage() {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setIsLoading(true)
+    event.preventDefault();
+    setIsLoading(true);
 
     // Simulating an API call
     setTimeout(() => {
-      setIsLoading(false)
-      console.log('Sign in attempt with:', email, password)
-    }, 2000)
+      setIsLoading(false);
+      console.log("Sign in attempt with:", email, password);
+    }, 2000);
   }
 
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+    <div className="container flex h-screen w-screen flex-col items-center justify-center shadow-lg">
       <Card className="w-[350px]">
         <CardHeader className="space-y-1">
           <div className="flex justify-between items-center">
             <CardTitle className="text-2xl">Sign in</CardTitle>
             <Button variant="ghost" size="icon" asChild>
               <Link href="/">
-                <X className="h-4 w-4" />
+                <X className="h-6 w-6 font-bold" />
               </Link>
             </Button>
           </div>
@@ -76,7 +83,11 @@ export default function SignInPage() {
                 Remember me
               </label>
             </div>
-            <Button className="w-full mt-6 bg-violet-600 hover:bg-violet-700" type="submit" disabled={isLoading}>
+            <Button
+              className="w-full mt-6 bg-violet-600 hover:bg-violet-700"
+              type="submit"
+              disabled={isLoading}
+            >
               {isLoading ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               ) : (
@@ -103,12 +114,15 @@ export default function SignInPage() {
           </Button>
           <p className="mt-4 text-center text-sm text-muted-foreground">
             Don't have an account?{" "}
-            <Link href="/auth/signup" className="text-violet-600 hover:underline">
+            <Link
+              href="/auth/signup"
+              className="text-violet-600 hover:underline"
+            >
               Sign up
             </Link>
           </p>
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }

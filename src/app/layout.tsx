@@ -2,9 +2,8 @@ import { Footer, Navbar } from "@/components";
 import { SITE_CONFIG } from "@/config";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
-import { ClerkProvider } from '@clerk/nextjs';
-import { dark } from '@clerk/themes';
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -23,10 +22,15 @@ export default function RootLayout({
                     font.className
                 )}
             >
-                <ClerkProvider appearance={{ baseTheme: dark}}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
                     {children}
-                </ClerkProvider>
+                </ThemeProvider>
             </body>
         </html>
     );
-};
+}
